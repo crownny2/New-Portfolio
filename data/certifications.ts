@@ -1,3 +1,14 @@
+export type Certification = {
+  id: string;
+  title: string;
+  organization: string;
+  date: string;
+  image: string;
+  certificateUrl: string;
+  downloadUrl: string;
+  isPlaceholder: boolean;
+};
+
 export const certifications: Certification[] = [
   {
     id: "cert-advancepython",
