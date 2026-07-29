@@ -126,7 +126,6 @@ export default function About() {
               text="Curious builder, Always learning, Always shipping"
               as="h2"
               splitBy="words"
-              trigger="scroll"
               stagger={0.04}
               className="font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink sm:text-5xl"
             />
