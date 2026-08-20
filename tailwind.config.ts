@@ -27,9 +27,9 @@ const config: Config = {
       },
       keyframes: {
         blob: {
-          "0%, 100%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(30px, -40px) scale(1.1)" },
-          "66%": { transform: "translate(-20px, 20px) scale(0.95)" },
+          "0%, 100%": { transform: "translate(0px, 0px) scale(1) rotate(0deg)" },
+          "33%": { transform: "translate(30px, -40px) scale(1.1) rotate(8deg)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.95) rotate(-6deg)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
@@ -43,12 +43,17 @@ const config: Config = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        "gradient-x": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         blob: "blob 12s infinite ease-in-out",
         float: "float 6s ease-in-out infinite",
         marquee: "marquee 24s linear infinite",
         "spin-slow": "spin-slow 6s linear infinite",
+        "gradient-x": "gradient-x 6s ease infinite",
       },
     },
   },

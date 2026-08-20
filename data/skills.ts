@@ -38,6 +38,6 @@ export const skillCategories: SkillCategory[] = [
   {
     category: "Tools & Platforms",
     description: "The everyday toolkit for shipping and collaborating.",
-    skills: ["Git", "GitHub", "Postman", "Vercel", "VS Code"],
+    skills: ["Git", "GitHub", "Postman", "Vercel", "Render", "Hugging Face", "VS Code"],
   },
 ];

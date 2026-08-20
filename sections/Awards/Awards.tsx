@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Trophy, Medal, Globe2, Eye } from "lucide-react";
+import { Trophy, Medal, Globe2, Eye, BookOpen, ExternalLink } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FadeIn from "@/components/animations/FadeIn";
 import { awards, type Award } from "@/data/awards";
@@ -12,12 +12,14 @@ const icons: Record<Award["icon"], React.ElementType> = {
   trophy: Trophy,
   medal: Medal,
   globe: Globe2,
+  book: BookOpen,
 };
 
 function AwardCard({ award, index }: { award: Award; index: number }) {
   const Icon = icons[award.icon];
   const [imgFailed, setImgFailed] = useState(false);
   const showImage = Boolean(award.image) && !imgFailed;
+  const showLink = Boolean(award.link) && !showImage;
 
   return (
     <motion.div
@@ -78,6 +80,18 @@ function AwardCard({ award, index }: { award: Award; index: number }) {
         <p className="mt-3 font-sans text-sm leading-relaxed text-muted">
           {award.description}
         </p>
+
+        {showLink && (
+          <a
+            href={award.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor-hover
+            className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full border border-sky/30 px-4 py-2 font-sans text-xs font-medium text-ink transition-colors hover:border-sky hover:text-sky"
+          >
+            View Publication <ExternalLink size={12} />
+          </a>
+        )}
       </div>
     </motion.div>
   );
@@ -97,12 +111,12 @@ export default function Awards() {
         <SectionHeading
           eyebrow="Awards & Recognition"
           title="Recognized for research that matters."
-          description="Three milestones from RiceSure's journey from a campus research fair to an international conference stage."
+          description="Four milestones from RiceSure's journey from a campus research fair to an international, published paper."
           align="center"
           className="mx-auto"
         />
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {awards.map((award, i) => (
             <FadeIn key={award.title} delay={i * 0.12}>
               <AwardCard award={award} index={i} />

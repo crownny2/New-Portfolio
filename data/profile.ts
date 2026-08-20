@@ -46,9 +46,9 @@ export const profile = {
     ],
   },
   stats: [
-    { label: "Projects Built", value: 2, suffix: "+" },
-    { label: "Recognitions Earned", value: 3, suffix: "" },
-    { label: "Core Technologies", value: 12, suffix: "+" },
+    { label: "Projects Built", value: 4, suffix: "+" },
+    { label: "Recognitions Earned", value: 4, suffix: "" },
+    { label: "Core Technologies", value: 14, suffix: "+" },
     { label: "Years Learning & Building", value: 4, suffix: "" },
   ],
 };

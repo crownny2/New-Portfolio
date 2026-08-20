@@ -1,7 +1,13 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function GridBackground({ className = "" }: { className?: string }) {
   return (
-    <div
+    <motion.div
       aria-hidden
+      animate={{ backgroundPosition: ["0px 0px", "56px 56px"] }}
+      transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
       className={`pointer-events-none absolute inset-0 ${className}`}
       style={{
         backgroundImage:

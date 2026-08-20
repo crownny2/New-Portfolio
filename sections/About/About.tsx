@@ -10,9 +10,9 @@ import CountUp from "@/components/animations/CountUp";
 import { profile } from "@/data/profile";
 
 const stats = [
-  { label: "Awards", value: 3, },
+  { label: "Awards", value: 4, },
   { label: "Certificates", value: 9, },
-  { label: "Projects", value: 3, },
+  { label: "Projects", value: 4, },
   { label: "Passion", value: 100, suffix: "%" },
 ];
 
