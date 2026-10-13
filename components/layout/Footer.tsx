@@ -2,7 +2,7 @@
 
 import { profile } from "@/data/profile";
 import { navLinks } from "@/constants/navigation";
-import { Github, Linkedin, BookOpen, ArrowUp } from "lucide-react";
+import { Github, Linkedin, BookOpen, Fingerprint, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -71,6 +71,16 @@ export default function Footer() {
                   className="inline-flex items-center gap-2 font-sans text-sm text-ink/70 transition-colors hover:text-sky"
                 >
                   <BookOpen size={15} /> ResearchGate
+                </a>
+              </li>
+              <li>
+                <a
+                  href={profile.socials.orcid}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-sans text-sm text-ink/70 transition-colors hover:text-sky"
+                >
+                  <Fingerprint size={15} /> ORCID
                 </a>
               </li>
               <li>

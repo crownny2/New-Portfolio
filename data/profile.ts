@@ -22,6 +22,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/crown-james-cedeno/",
     researchgate:
       "https://www.researchgate.net/scientific-contributions/Crown-James-C-Cedeno-2361831243",
+    orcid: "https://orcid.org/0009-0007-8057-6120",
     facebook: "",
   },
   resumeUrl: "/resume.pdf",
