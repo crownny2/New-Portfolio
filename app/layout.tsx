@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import Cursor from "@/components/shared/Cursor";
 import PageLoader from "@/components/shared/PageLoader";
 import SmoothScroll from "@/components/shared/SmoothScroll";
+import StructuredData from "@/components/StructuredData";
 import { profile } from "@/data/profile";
 
 const fraunces = Fraunces({
@@ -29,21 +30,27 @@ const script = Alex_Brush({
   display: "swap",
 });
 
+const siteTitle =
+  "Crown James C. Cedeño — Full Stack Developer & IT Graduate, HCDC";
+const siteDescription =
+  "Crown James C. Cedeño is an Information Technology graduate of Holy Cross of Davao College and a full stack developer in Davao City. Co-author of a Scopus-indexed SPIE paper on CNN-based rice grain purity analysis presented at ICMIP 2026 in Sapporo, Japan.";
+
 export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.role}`,
-  description: profile.summary,
-  metadataBase: new URL(profile.socials.portfolio),
+  title: siteTitle,
+  description: siteDescription,
+  metadataBase: new URL("https://crownjames.vercel.app"),
+  alternates: { canonical: "/" },
   openGraph: {
-    title: `${profile.name} — ${profile.role}`,
-    description: profile.summary,
+    title: siteTitle,
+    description: siteDescription,
     url: profile.socials.portfolio,
     siteName: profile.name,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: `${profile.name} — ${profile.role}`,
-    description: profile.summary,
+    title: siteTitle,
+    description: siteDescription,
   },
 };
 
@@ -53,6 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${fraunces.variable} ${jakarta.variable} ${script.variable} font-sans antialiased`}>
+        <StructuredData />
         <PageLoader />
         <Cursor />
         <SmoothScroll>

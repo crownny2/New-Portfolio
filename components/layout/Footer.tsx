@@ -2,7 +2,7 @@
 
 import { profile } from "@/data/profile";
 import { navLinks } from "@/constants/navigation";
-import { Github, ArrowUp } from "lucide-react";
+import { Github, Linkedin, BookOpen, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -55,6 +55,26 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href={profile.socials.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-sans text-sm text-ink/70 transition-colors hover:text-sky"
+                >
+                  <Linkedin size={15} /> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href={profile.socials.researchgate}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 font-sans text-sm text-ink/70 transition-colors hover:text-sky"
+                >
+                  <BookOpen size={15} /> ResearchGate
+                </a>
+              </li>
+              <li>
+                <a
                   href={`mailto:${profile.email}`}
                   className="font-sans text-sm text-ink/70 transition-colors hover:text-sky"
                 >
@@ -68,7 +88,7 @@ export default function Footer() {
 
       <div className="mx-auto mt-16 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-slate-100 pt-6 sm:flex-row">
         <p className="font-sans text-xs text-muted">
-          © {new Date().getFullYear()} {profile.name}. All rights reserved.
+          © {new Date().getFullYear()} {profile.fullName}. All rights reserved.
         </p>
 
         <motion.a

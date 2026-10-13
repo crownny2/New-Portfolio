@@ -92,7 +92,7 @@ function PhotoFrame() {
       {/* Graduation Image - hidden by default, shows on hover */}
       <Image
         src="/profile/grad.jpg"
-        alt="Graduation"
+        alt={`${profile.fullName} graduation photo`}
         fill
         sizes="(max-width:768px) 100vw, 450px"
         className="pointer-events-none object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"

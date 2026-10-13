@@ -1,5 +1,6 @@
 export const profile = {
   name: "Crown James Cedeño",
+  fullName: "Crown James C. Cedeño",
   firstName: "Crown",
   role: "Full Stack Developer",
   photo: "/profile/grad.jpg",
@@ -18,7 +19,9 @@ export const profile = {
   socials: {
     github: "https://github.com/crownny2",
     portfolio: "https://crownjames.vercel.app/",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/crown-james-cedeno/",
+    researchgate:
+      "https://www.researchgate.net/scientific-contributions/Crown-James-C-Cedeno-2361831243",
     facebook: "",
   },
   resumeUrl: "/resume.pdf",
