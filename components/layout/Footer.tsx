@@ -2,7 +2,8 @@
 
 import { profile } from "@/data/profile";
 import { navLinks } from "@/constants/navigation";
-import { Github, Linkedin, BookOpen, Fingerprint, ArrowUp } from "lucide-react";
+import { Github, Linkedin, BookOpen, ArrowUp } from "lucide-react";
+import { SiOrcid } from "react-icons/si";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -80,7 +81,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 font-sans text-sm text-ink/70 transition-colors hover:text-sky"
                 >
-                  <Fingerprint size={15} /> ORCID
+                  <SiOrcid size={15} /> ORCID
                 </a>
               </li>
               <li>
